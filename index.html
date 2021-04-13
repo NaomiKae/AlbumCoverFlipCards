@@ -1,44 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Album cover flipcard interface</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,500;0,600;1,600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
-    <div class="background"></div>
 
-    <div id="content">
-      <h1>Magic 8 Ball</h1>
-      <p id="info">
-        Ask me what you want to know and click on the Magic 8 Ball
-      </p>
-      <input type="text" id="question" />
-      <div id="eight-ball" class="eight-ball">
-        <div class="top-glare"></div>
-        <div class="answer">
-          <p id="eight">8</p>
-          <p id="answer"></p>
-        </div>
-        <div class="mid-glare"></div>
-      </div>
-      <div class="bottom-shadow"></div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <title></title>
+</head>
 
-      <div id="eight-ball2" class="eight-ball2">
-        <div class="top-glare2"></div>
-        <div class="inner-circle">
-          <div id="triangle-small"></div>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="col-md-4 orange"> <img src="https://upload.wikimedia.org/wikipedia/en/3/36/Calvin_Harris_-_Giant.png" width=200px /></div>
+          <div class="flip-card-back">
+            <img src="https://upload.wikimedia.org/wikipedia/en/3/36/Calvin_Harris_-_Giant.png" width=200px />
+            <div class="card-text">
+              <h1>Giant</h1>
+              <p>Calvin Harris</p>
+              <p>We love this song!</p>
+              <div class="popup" onclick="myFunction()">
+                <span><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                    <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                  </svg>
+                </span>
+                <span class="popuptext" id="addPopup">Added to playlist!</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="mid-glare"></div>
       </div>
-      <div class="bottom-shadow"></div>
-    </div>
-  </body>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="col-md-4 orange"><img src="https://img.discogs.com/Klfja18tVtBICfdJ_nVFwYQFj6w=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-11758269-1521883919-8921.jpeg.jpg" width="200px" /></div>
+          <div class="flip-card-back">
+            <img src="https://img.discogs.com/Klfja18tVtBICfdJ_nVFwYQFj6w=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-11758269-1521883919-8921.jpeg.jpg" width="200px" />
+            <div class="card-text">
+              <h1>Flames</h1>
+              <p>Sia</p>
+              <p>We love this song!</p>
+              <div class="popup" onclick="siaFunction()"><span><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                    <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                  </svg></span>
+                <span class="popuptext" id="addSiaPopup">Added to playlist!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="col-md-4 orange"><img src="https://img.discogs.com/2olYEv5fCvCvxqvgHDPX34M6yKU=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-9406031-1480014234-9526.jpeg.jpg" width="200px" /></div>
+          <div class="flip-card-back">
+            <img src="https://img.discogs.com/2olYEv5fCvCvxqvgHDPX34M6yKU=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-9406031-1480014234-9526.jpeg.jpg" width="200px" />
+            <div class="card-text">
+              <h1>One Day/Reckoning Song</h1>
+              <p>Architect & Engineer</p>
+              <p>We love this song!</p>
+              <div class="popup" onclick="architectFunction()"><span><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                    <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                  </svg>
+                </span>
+                <span class="popuptext" id="addArchitectPopup">Added to playlist!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="col-md-4"><img src="https://music.allaccess.com/wp-content/uploads/2016/02/Duke-Dumont-Black-n-white-logo.png" width="200px"> </div>
+            <div class="flip-card-back">
+              <img src="https://music.allaccess.com/wp-content/uploads/2016/02/Duke-Dumont-Black-n-white-logo.png" width="200px">
+              <div class="card-text">
+                <h1>Ocean Drive</h1>
+                <p>Duke Dumont</p>
+                <p>We love this song!</p>
+                <div class="popup" onclick="dukeFunction()"><span><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                      <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                    </svg>
+                  </span>
+                  <span class="popuptext" id="addDukePopup">Added to playlist!</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="col-md-4"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1a/Portugal._The_Man_Woodstock_album_cover.jpg/220px-Portugal._The_Man_Woodstock_album_cover.jpg" width="200px"> </div>
+            <div class="flip-card-back">
+              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1a/Portugal._The_Man_Woodstock_album_cover.jpg/220px-Portugal._The_Man_Woodstock_album_cover.jpg" width="200px">
+              <div class="card-text">
+                <h1>Live In The Moment</h1>
+                <p>Portugal the Man</p>
+                <p>We love this song!</p>
+                <div class="popup" onclick="portugalFunction()"><span><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                      <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                    </svg>
+                  </span>
+                  <span class="popuptext" id="addPortugalPopup">Added to playlist!</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="col-md-4"><img src="https://images-na.ssl-images-amazon.com/images/I/61HJO-SGJGL._SL1000_.jpg" width="200px"></div>
+            <div class="flip-card-back">
+              <img src="https://images-na.ssl-images-amazon.com/images/I/61HJO-SGJGL._SL1000_.jpg" width="200px">
+              <div class="card-text">
+                <h1>Feel it Still</h1>
+                <p>Portugal The Man</p>
+                <p>We love this song!</p>
+                <div class="popup" onclick="portugal2Function()"><span><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                      <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                    </svg>
+                  </span>
+                  <span class="popuptext" id="addPortugal2Popup">Added to playlist!</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="col-md-4"><img src="https://vignette.wikia.nocookie.net/au-ra/images/1/1e/Panic_Room.png/revision/latest?cb=20181022192025" width="200px"> </div>
+            <div class="flip-card-back">
+              <img src="https://vignette.wikia.nocookie.net/au-ra/images/1/1e/Panic_Room.png/revision/latest?cb=20181022192025" width="200px">
+              <div class="card-text">
+                <h1>Panic Room</h1>
+                <p>Aura</p>
+                <p>We love this song!</p>
+                <div class="popup" onclick="auraFunction()"><span><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                      <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                    </svg>
+                  </span>
+                  <span class="popuptext" id="addAuraPopup">Added to playlist!</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="col-md-4"><img src="https://upload.wikimedia.org/wikipedia/en/7/72/Dopamine_Studio_Album_Cover.jpg" width="200px"> </div>
+            <div class="flip-card-back">
+              <img src="https://upload.wikimedia.org/wikipedia/en/7/72/Dopamine_Studio_Album_Cover.jpg" width="200px">
+              <div class="card-text">
+                <h1>Electric Love</h1>
+                <p>Bornes</p>
+                <p>We love this song!</p>
+                <div class="popup" onclick="bornesFunction()"><span><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                      <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                    </svg></span>
+                  <span class="popuptext" id="addBornesPopup">Added to playlist!</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="col-md-4"><img src="https://upload.wikimedia.org/wikipedia/en/e/e6/The_Weeknd_-_Blinding_Lights.png" width="200px"> </div>
+            <div class="flip-card-back">
+              <img src="https://upload.wikimedia.org/wikipedia/en/e/e6/The_Weeknd_-_Blinding_Lights.png" width="200px">
+              <div class="card-text">
+                <h1>Blinding Lights</h1>
+                <p>The Weekend</p>
+                <p>We love this song!</p>
+                <div class="popup" onclick="weekendFunction()"><span><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                      <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                    </svg></span>
+                  <span class="popuptext" id="addWeekendPopup">Added to playlist!</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="col-md-4 orange"> <img src="https://hypeddit-gates-prod.s3.amazonaws.com/ik6ade_coverartmanual" width=200px /></div>
+              <div class="flip-card-back">
+                <img src="https://hypeddit-gates-prod.s3.amazonaws.com/ik6ade_coverartmanual" width=200px />
+                <div class="card-text">
+                  <h1>Beggin</h1>
+                  <p>Madcon</p>
+                  <p>We love this song!</p>
+                  <div class="popup" onclick="madconFunction()"><span><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                        <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                      </svg></span>
+                    <span class="popuptext" id="addMadconPopup">Added to playlist!</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="col-md-4 orange"><img src="https://images.genius.com/67a80685b84a3fe6a948511dc216767a.1000x1000x1.jpg" width="200px" /></div>
+              <div class="flip-card-back">
+                <img src="https://images.genius.com/67a80685b84a3fe6a948511dc216767a.1000x1000x1.jpg" width="200px" />
+                <div class="card-text">
+                  <h1>Take Me to Church</h1>
+                  <p>Hozier</p>
+                  <p>We love this song!</p>
+                  <div class="popup" onclick="hozierFunction()"><span><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                        <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                      </svg>
+                    </span>
+                    <span class="popuptext" id="addHozierPopup">Added to playlist!</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="col-md-4 orange"><img src="https://cdn.shopify.com/s/files/1/2976/0132/products/2862952_400x.jpg?v=1596090464" width="200px" /></div>
+              <div class="flip-card-back">
+                <img src="https://cdn.shopify.com/s/files/1/2976/0132/products/2862952_400x.jpg?v=1596090464" width="200px" />
+                <div class="card-text">
+                  <h1>Stressed Out</h1>
+                  <p>21 Pilots</p>
+                  <p>We love this song!</p>
+                  <div class="popup" onclick="pilotsFunction()"><span><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                        <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                      </svg>
+                    </span>
+                    <span class="popuptext" id="addPilotsPopup">Added to playlist!</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="col-md-4 orange"> <img src="https://i1.sndcdn.com/artworks-000271152011-jyvp08-t500x500.jpg" width=200px /></div>
+                <div class="flip-card-back">
+                  <img src="https://i1.sndcdn.com/artworks-000271152011-jyvp08-t500x500.jpg" width=200px />
+                  <div class="card-text">
+                    <h1>Sign of The Times</h1>
+                    <p>Harry Styles</p>
+                    <p>We love this song!</p>
+                    <div class="popup" onclick="harryFunction()"><span><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                          <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                        </svg></span>
+                      <span class="popuptext" id="addHarryPopup">Added to playlist!</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="col-md-4 orange"><img src="https://i.pinimg.com/originals/4d/d0/04/4dd004169cab0da71c5d413d8b8969fd.png" width="200px" /></div>
+                <div class="flip-card-back">
+                  <img src="https://i.pinimg.com/originals/4d/d0/04/4dd004169cab0da71c5d413d8b8969fd.png" width="200px" />
+                  <div class="card-text">
+                    <h1>She's Out of My League</h1>
+                    <p>Fitz and the Tantrums</p>
+                    <p>We love this song!</p>
+                    <div class="popup" onclick="fitzFunction()"><span><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                          <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                        </svg></span>
+                      <span class="popuptext" id="addFitzPopup">Added to playlist!</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="col-md-4 orange"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN9sSHi8lLWVrZWOr9IQl556cSC2ZEmWYrzHB5u89zmLoq7jdMGGIoKlVcc_b0B0jRAIdUuUda&usqp=CAc" width="200px" /></div>
+                <div class="flip-card-back">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN9sSHi8lLWVrZWOr9IQl556cSC2ZEmWYrzHB5u89zmLoq7jdMGGIoKlVcc_b0B0jRAIdUuUda&usqp=CAc" width="200px" />
+                  <div class="card-text">
+                    <h1>Darkside</h1>
+                    <p>Bishop Briggs</p>
+                    <p>We love this song!</p>
+                    <div class="popup" onclick="bishopFunction()"><span><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                          <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                        </svg></span>
+                      <span class="popuptext" id="addBishopPopup">Added to playlist!</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+</body>
+<script src="/js/main.js"></script>
 </html>
